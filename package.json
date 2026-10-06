@@ -8,7 +8,8 @@
     "build": "vite build",
     "lint": "oxlint",
     "preview": "vite preview",
-    "build-data": "node scripts/build-data.mjs"
+    "build-data": "node scripts/build-data.mjs",
+    "start": "node scripts/serve.mjs"
   },
   "dependencies": {
     "html2canvas": "^1.4.1",

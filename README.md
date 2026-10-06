@@ -45,3 +45,9 @@ npm run preview    # sirve dist/ localmente para probar
 `dist/` es una carpeta 100% estática: se puede desplegar en Netlify, Vercel, GitHub Pages, o
 cualquier hosting estático. Debe servirse por **HTTPS** (o `localhost`) porque el hasheo de la
 cédula usa `crypto.subtle`, que requiere un contexto seguro.
+
+## Despliegue en Railway
+
+Railway detecta Node automáticamente: ejecuta `npm run build` y luego `npm start`
+(`scripts/serve.mjs`, un servidor estático sin dependencias que sirve `dist/` en `$PORT`).
+No requiere variables de entorno. Cada `git push` a `main` redespliega la app.
